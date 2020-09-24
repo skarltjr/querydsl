@@ -1,0 +1,20 @@
+spring:
+  profiles:
+    active: local  #로컬에서만 사전 데이터등록하고 테스트에서는 영향안주도록
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/querydsl
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+  # show_sql: true
+        format_sql: true
+
+logging.level:
+  org.hibernate.SQL: debug
+# org.hibernate.type: trace
